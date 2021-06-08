@@ -16,6 +16,22 @@ const config = {
 }
 ```
 
+or
+
+```js
+plugins: [
+    new ModuleFederationPlugin({
+        name: 'my-app',
+        remotes: {
+            'my-remote-1': 'my-remote-1@[window.remote-1-domain]/remoteEntry.js?[getRandomString()]',
+            ...
+        },
+        shared: {...}
+    }),
+    new ExternalTemplateRemotesPlugin(), //no parameter,
+]
+```
+
 **Host (app1) source somewhere before loading main entry file**
 ```js
 window.app2Url = "//localhost:3002"; // Whatever the url/logic to determine your remote module is
