@@ -6,7 +6,7 @@
   "author": "Zack Jackson <zackary.l.jackson@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "webpack-sources": "^2.2.0"
+    "webpack-sources": "^3.0.0"
   },
   "peerDependencies": {
     "webpack": "^5"
